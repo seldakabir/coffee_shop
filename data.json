@@ -4,7 +4,7 @@
     "title": "Espresso",
     "image": "image1.jpg",
     "price": 3.5,
-    "isAvailable": true,
+    "isAvailable": false,
     "description": "Strong and bold espresso shot.",
     "topic": "hot bar"
   },

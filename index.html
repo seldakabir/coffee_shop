@@ -22,7 +22,34 @@
       <header class="bg-primary text-white text-center py-3">
         <h1>Header Section</h1>
       </header>
-      <main class="mt-4"></main>
+      <main class="main mt-4">
+        <section class="section" data-topic="hot bar">
+          <div
+            class="product${ product.isAvailable ? '' : ' product--not-available' }${ isInShoppingList !== undefined ? ' product--in-shopping-list' : '' }"
+            data-id="5"
+          >
+            <div>
+              <h3>${product.title}</h3>
+              <p>${product.description}</p>
+              <div>
+                <p>${product.price}</p>
+                <p>usd</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section" data-topic="mocktails"></section>
+        <section class="section" data-topic="Carbonated Drink"></section>
+        <section class="section" data-topic="cold bar without milk"></section>
+        <section class="section" data-topic="cold bar with milk"></section>
+        <section class="section" data-topic="Desserts"></section>
+        <section class="section" data-topic="breakfast"></section>
+        <section class="section" data-topic="salad"></section>
+        <section class="section" data-topic="deep"></section>
+        <section class="section" data-topic="pasta"></section>
+        <section class="section" data-topic="sandwich"></section>
+        <section class="section" data-topic="drinks"></section>
+      </main>
     </div>
     <!-- Bootstrap JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
