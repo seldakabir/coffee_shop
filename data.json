@@ -1,0 +1,866 @@
+[
+  {
+    "id": 1,
+    "title": "Espresso",
+    "image": "image1.jpg",
+    "price": 3.5,
+    "isAvailable": true,
+    "description": "Strong and bold espresso shot.",
+    "topic": "hot bar"
+  },
+  {
+    "id": 2,
+    "title": "Latte",
+    "image": "image2.jpg",
+    "price": 4.0,
+    "isAvailable": true,
+    "description": "Smooth espresso with steamed milk.",
+    "topic": "hot bar"
+  },
+  {
+    "id": 3,
+    "title": "Cappuccino",
+    "image": "image3.jpg",
+    "price": 4.2,
+    "isAvailable": true,
+    "description": "Espresso with steamed milk and foam.",
+    "topic": "hot bar"
+  },
+  {
+    "id": 4,
+    "title": "Mocha",
+    "image": "image4.jpg",
+    "price": 4.5,
+    "isAvailable": true,
+    "description": "Espresso with chocolate and steamed milk.",
+    "topic": "hot bar"
+  },
+  {
+    "id": 5,
+    "title": "Americano",
+    "image": "image5.jpg",
+    "price": 3.0,
+    "isAvailable": true,
+    "description": "Espresso with hot water.",
+    "topic": "hot bar"
+  },
+  {
+    "id": 6,
+    "title": "Flat White",
+    "image": "image6.jpg",
+    "price": 4.0,
+    "isAvailable": true,
+    "description": "Espresso with steamed milk and microfoam.",
+    "topic": "hot bar"
+  },
+  {
+    "id": 7,
+    "title": "Macchiato",
+    "image": "image7.jpg",
+    "price": 3.8,
+    "isAvailable": true,
+    "description": "Espresso with a small amount of steamed milk.",
+    "topic": "hot bar"
+  },
+  {
+    "id": 8,
+    "title": "Hot Chocolate",
+    "image": "image8.jpg",
+    "price": 3.5,
+    "isAvailable": true,
+    "description": "Rich and creamy hot chocolate.",
+    "topic": "hot bar"
+  },
+  {
+    "id": 9,
+    "title": "Virgin Mojito",
+    "image": "image9.jpg",
+    "price": 5.0,
+    "isAvailable": true,
+    "description": "Refreshing mint and lime mocktail.",
+    "topic": "mocktails"
+  },
+  {
+    "id": 10,
+    "title": "Strawberry Daiquiri",
+    "image": "image10.jpg",
+    "price": 5.5,
+    "isAvailable": true,
+    "description": "Sweet and tangy strawberry mocktail.",
+    "topic": "mocktails"
+  },
+  {
+    "id": 11,
+    "title": "Pina Colada",
+    "image": "image11.jpg",
+    "price": 5.5,
+    "isAvailable": true,
+    "description": "Creamy pineapple and coconut mocktail.",
+    "topic": "mocktails"
+  },
+  {
+    "id": 12,
+    "title": "Cosmopolitan",
+    "image": "image12.jpg",
+    "price": 6.0,
+    "isAvailable": true,
+    "description": "Cranberry and lime flavored mocktail.",
+    "topic": "mocktails"
+  },
+  {
+    "id": 13,
+    "title": "Blue Lagoon",
+    "image": "image13.jpg",
+    "price": 5.5,
+    "isAvailable": true,
+    "description": "Refreshing blue curacao mocktail.",
+    "topic": "mocktails"
+  },
+  {
+    "id": 14,
+    "title": "Mango Mule",
+    "image": "image14.jpg",
+    "price": 5.5,
+    "isAvailable": true,
+    "description": "Mango and ginger flavored mocktail.",
+    "topic": "mocktails"
+  },
+  {
+    "id": 15,
+    "title": "Apple Cider",
+    "image": "image15.jpg",
+    "price": 4.0,
+    "isAvailable": true,
+    "description": "Refreshing apple cider mocktail.",
+    "topic": "mocktails"
+  },
+  {
+    "id": 16,
+    "title": "Lemon Fizz",
+    "image": "image16.jpg",
+    "price": 4.5,
+    "isAvailable": true,
+    "description": "Zesty lemon and soda mocktail.",
+    "topic": "mocktails"
+  },
+  {
+    "id": 17,
+    "title": "Sparkling Water",
+    "image": "image17.jpg",
+    "price": 2.0,
+    "isAvailable": true,
+    "description": "Refreshing carbonated water.",
+    "topic": "Carbonated Drink"
+  },
+  {
+    "id": 18,
+    "title": "Club Soda",
+    "image": "image18.jpg",
+    "price": 2.5,
+    "isAvailable": true,
+    "description": "Bubbly and refreshing soda water.",
+    "topic": "Carbonated Drink"
+  },
+  {
+    "id": 19,
+    "title": "Ginger Ale",
+    "image": "image19.jpg",
+    "price": 3.0,
+    "isAvailable": true,
+    "description": "Spicy and sweet ginger ale.",
+    "topic": "Carbonated Drink"
+  },
+  {
+    "id": 20,
+    "title": "Tonic Water",
+    "image": "image20.jpg",
+    "price": 2.5,
+    "isAvailable": true,
+    "description": "Bitter and bubbly tonic water.",
+    "topic": "Carbonated Drink"
+  },
+  {
+    "id": 21,
+    "title": "Cola",
+    "image": "image21.jpg",
+    "price": 2.0,
+    "isAvailable": true,
+    "description": "Classic cola soda.",
+    "topic": "Carbonated Drink"
+  },
+  {
+    "id": 22,
+    "title": "Lemon-Lime Soda",
+    "image": "image22.jpg",
+    "price": 2.0,
+    "isAvailable": true,
+    "description": "Crisp and refreshing lemon-lime soda.",
+    "topic": "Carbonated Drink"
+  },
+  {
+    "id": 23,
+    "title": "Root Beer",
+    "image": "image23.jpg",
+    "price": 3.0,
+    "isAvailable": true,
+    "description": "Sweet and foamy root beer.",
+    "topic": "Carbonated Drink"
+  },
+  {
+    "id": 24,
+    "title": "Cream Soda",
+    "image": "image24.jpg",
+    "price": 3.0,
+    "isAvailable": true,
+    "description": "Smooth and creamy soda.",
+    "topic": "Carbonated Drink"
+  },
+  {
+    "id": 25,
+    "title": "Iced Americano",
+    "image": "image25.jpg",
+    "price": 3.0,
+    "isAvailable": true,
+    "description": "Cold and refreshing espresso with water.",
+    "topic": "cold bar without milk"
+  },
+  {
+    "id": 26,
+    "title": "Cold Brew",
+    "image": "image26.jpg",
+    "price": 4.0,
+    "isAvailable": true,
+    "description": "Slow-brewed and smooth iced coffee.",
+    "topic": "cold bar without milk"
+  },
+  {
+    "id": 27,
+    "title": "Iced Tea",
+    "image": "image27.jpg",
+    "price": 3.0,
+    "isAvailable": true,
+    "description": "Refreshing iced black tea.",
+    "topic": "cold bar without milk"
+  },
+  {
+    "id": 28,
+    "title": "Lemonade",
+    "image": "image28.jpg",
+    "price": 3.5,
+    "isAvailable": true,
+    "description": "Freshly squeezed lemon juice with water.",
+    "topic": "cold bar without milk"
+  },
+  {
+    "id": 29,
+    "title": "Iced Green Tea",
+    "image": "image29.jpg",
+    "price": 3.0,
+    "isAvailable": true,
+    "description": "Cool and refreshing iced green tea.",
+    "topic": "cold bar without milk"
+  },
+  {
+    "id": 30,
+    "title": "Iced Hibiscus Tea",
+    "image": "image30.jpg",
+    "price": 3.5,
+    "isAvailable": true,
+    "description": "Tangy and refreshing iced hibiscus tea.",
+    "topic": "cold bar without milk"
+  },
+  {
+    "id": 31,
+    "title": "Sparkling Lemonade",
+    "image": "image31.jpg",
+    "price": 4.0,
+    "isAvailable": true,
+    "description": "Bubbly and refreshing lemonade.",
+    "topic": "cold bar without milk"
+  },
+  {
+    "id": 32,
+    "title": "Iced Chai Tea",
+    "image": "image32.jpg",
+    "price": 4.0,
+    "isAvailable": true,
+    "description": "Spiced iced chai tea.",
+    "topic": "cold bar without milk"
+  },
+  {
+    "id": 33,
+    "title": "Iced Latte",
+    "image": "image33.jpg",
+    "price": 4.5,
+    "isAvailable": true,
+    "description": "Cold espresso with milk and ice.",
+    "topic": "cold bar with milk"
+  },
+  {
+    "id": 34,
+    "title": "Iced Cappuccino",
+    "image": "image34.jpg",
+    "price": 4.5,
+    "isAvailable": true,
+    "description": "Cold espresso with milk, ice, and foam.",
+    "topic": "cold bar with milk"
+  },
+  {
+    "id": 35,
+    "title": "Iced Mocha",
+    "image": "image35.jpg",
+    "price": 5.0,
+    "isAvailable": true,
+    "description": "Cold espresso with chocolate and milk.",
+    "topic": "cold bar with milk"
+  },
+  {
+    "id": 36,
+    "title": "Iced Matcha Latte",
+    "image": "image36.jpg",
+    "price": 5.0,
+    "isAvailable": true,
+    "description": "Cold matcha with milk and ice.",
+    "topic": "cold bar with milk"
+  },
+  {
+    "id": 37,
+    "title": "Iced Vanilla Latte",
+    "image": "image37.jpg",
+    "price": 4.8,
+    "isAvailable": true,
+    "description": "Cold espresso with vanilla syrup and milk.",
+    "topic": "cold bar with milk"
+  },
+  {
+    "id": 38,
+    "title": "Iced Caramel Latte",
+    "image": "image38.jpg",
+    "price": 4.8,
+    "isAvailable": true,
+    "description": "Cold espresso with caramel syrup and milk.",
+    "topic": "cold bar with milk"
+  },
+  {
+    "id": 39,
+    "title": "Iced Hazelnut Latte",
+    "image": "image39.jpg",
+    "price": 4.8,
+    "isAvailable": true,
+    "description": "Cold espresso with hazelnut syrup and milk.",
+    "topic": "cold bar with milk"
+  },
+  {
+    "id": 40,
+    "title": "Iced Almond Milk Latte",
+    "image": "image40.jpg",
+    "price": 5.0,
+    "isAvailable": true,
+    "description": "Cold espresso with almond milk and ice.",
+    "topic": "cold bar with milk"
+  },
+  {
+    "id": 41,
+    "title": "Cheesecake",
+    "image": "image41.jpg",
+    "price": 6.0,
+    "isAvailable": true,
+    "description": "Creamy cheesecake with a graham cracker crust.",
+    "topic": "Desserts"
+  },
+  {
+    "id": 42,
+    "title": "Chocolate Cake",
+    "image": "image42.jpg",
+    "price": 5.5,
+    "isAvailable": true,
+    "description": "Rich and moist chocolate cake.",
+    "topic": "Desserts"
+  },
+  {
+    "id": 43,
+    "title": "Brownie",
+    "image": "image43.jpg",
+    "price": 3.5,
+    "isAvailable": true,
+    "description": "Dense and fudgy chocolate brownie.",
+    "topic": "Desserts"
+  },
+  {
+    "id": 44,
+    "title": "Apple Pie",
+    "image": "image44.jpg",
+    "price": 4.5,
+    "isAvailable": true,
+    "description": "Classic apple pie with a flaky crust.",
+    "topic": "Desserts"
+  },
+  {
+    "id": 45,
+    "title": "Tiramisu",
+    "image": "image45.jpg",
+    "price": 5.0,
+    "isAvailable": true,
+    "description": "Coffee-flavored Italian dessert.",
+    "topic": "Desserts"
+  },
+  {
+    "id": 46,
+    "title": "Ice Cream Sundae",
+    "image": "image46.jpg",
+    "price": 4.0,
+    "isAvailable": true,
+    "description": "Ice cream topped with chocolate sauce and nuts.",
+    "topic": "Desserts"
+  },
+  {
+    "id": 47,
+    "title": "Lemon Tart",
+    "image": "image47.jpg",
+    "price": 4.0,
+    "isAvailable": true,
+    "description": "Tart and sweet lemon dessert.",
+    "topic": "Desserts"
+  },
+  {
+    "id": 48,
+    "title": "Fruit Salad",
+    "image": "image48.jpg",
+    "price": 3.5,
+    "isAvailable": true,
+    "description": "Fresh mixed fruit salad.",
+    "topic": "Desserts"
+  },
+  {
+    "id": 49,
+    "title": "Pancakes",
+    "image": "image49.jpg",
+    "price": 4.5,
+    "isAvailable": true,
+    "description": "Fluffy pancakes served with syrup.",
+    "topic": "breakfast"
+  },
+  {
+    "id": 50,
+    "title": "Omelette",
+    "image": "image50.jpg",
+    "price": 5.0,
+    "isAvailable": true,
+    "description": "Three-egg omelette with cheese and vegetables.",
+    "topic": "breakfast"
+  },
+  {
+    "id": 51,
+    "title": "French Toast",
+    "image": "image51.jpg",
+    "price": 4.5,
+    "isAvailable": true,
+    "description": "Cinnamon-flavored French toast.",
+    "topic": "breakfast"
+  },
+  {
+    "id": 52,
+    "title": "Breakfast Burrito",
+    "image": "image52.jpg",
+    "price": 5.5,
+    "isAvailable": true,
+    "description": "Burrito filled with eggs, cheese, and vegetables.",
+    "topic": "breakfast"
+  },
+  {
+    "id": 53,
+    "title": "Bagel with Cream Cheese",
+    "image": "image53.jpg",
+    "price": 3.0,
+    "isAvailable": true,
+    "description": "Toasted bagel served with cream cheese.",
+    "topic": "breakfast"
+  },
+  {
+    "id": 54,
+    "title": "Granola Parfait",
+    "image": "image54.jpg",
+    "price": 4.0,
+    "isAvailable": true,
+    "description": "Layers of granola, yogurt, and fruit.",
+    "topic": "breakfast"
+  },
+  {
+    "id": 55,
+    "title": "Avocado Toast",
+    "image": "image55.jpg",
+    "price": 4.5,
+    "isAvailable": true,
+    "description": "Toast topped with mashed avocado.",
+    "topic": "breakfast"
+  },
+  {
+    "id": 56,
+    "title": "Scrambled Eggs",
+    "image": "image56.jpg",
+    "price": 3.5,
+    "isAvailable": true,
+    "description": "Fluffy scrambled eggs.",
+    "topic": "breakfast"
+  },
+  {
+    "id": 57,
+    "title": "Caesar Salad",
+    "image": "image57.jpg",
+    "price": 5.0,
+    "isAvailable": true,
+    "description": "Romaine lettuce with Caesar dressing and croutons.",
+    "topic": "salad"
+  },
+  {
+    "id": 58,
+    "title": "Greek Salad",
+    "image": "image58.jpg",
+    "price": 5.0,
+    "isAvailable": true,
+    "description": "Tomatoes, cucumbers, olives, and feta cheese.",
+    "topic": "salad"
+  },
+  {
+    "id": 59,
+    "title": "Caprese Salad",
+    "image": "image59.jpg",
+    "price": 4.5,
+    "isAvailable": true,
+    "description": "Tomatoes, mozzarella, and basil.",
+    "topic": "salad"
+  },
+  {
+    "id": 60,
+    "title": "Cobb Salad",
+    "image": "image60.jpg",
+    "price": 6.0,
+    "isAvailable": true,
+    "description": "Mixed greens with chicken, bacon, and blue cheese.",
+    "topic": "salad"
+  },
+  {
+    "id": 61,
+    "title": "Spinach Salad",
+    "image": "image61.jpg",
+    "price": 4.5,
+    "isAvailable": true,
+    "description": "Fresh spinach with nuts and berries.",
+    "topic": "salad"
+  },
+  {
+    "id": 62,
+    "title": "Asian Chicken Salad",
+    "image": "image62.jpg",
+    "price": 6.0,
+    "isAvailable": true,
+    "description": "Mixed greens with chicken, mandarin oranges, and almonds.",
+    "topic": "salad"
+  },
+  {
+    "id": 63,
+    "title": "Quinoa Salad",
+    "image": "image63.jpg",
+    "price": 5.5,
+    "isAvailable": true,
+    "description": "Quinoa with vegetables and lemon dressing.",
+    "topic": "salad"
+  },
+  {
+    "id": 64,
+    "title": "Beet Salad",
+    "image": "image64.jpg",
+    "price": 5.0,
+    "isAvailable": true,
+    "description": "Roasted beets with goat cheese and walnuts.",
+    "topic": "salad"
+  },
+  {
+    "id": 65,
+    "title": "Hummus",
+    "image": "image65.jpg",
+    "price": 4.0,
+    "isAvailable": true,
+    "description": "Creamy chickpea dip with olive oil.",
+    "topic": "deep"
+  },
+  {
+    "id": 66,
+    "title": "Guacamole",
+    "image": "image66.jpg",
+    "price": 4.5,
+    "isAvailable": true,
+    "description": "Fresh avocado dip with lime and cilantro.",
+    "topic": "deep"
+  },
+  {
+    "id": 67,
+    "title": "Salsa",
+    "image": "image67.jpg",
+    "price": 3.0,
+    "isAvailable": true,
+    "description": "Spicy tomato and pepper dip.",
+    "topic": "deep"
+  },
+  {
+    "id": 68,
+    "title": "Spinach Dip",
+    "image": "image68.jpg",
+    "price": 4.5,
+    "isAvailable": true,
+    "description": "Creamy spinach and artichoke dip.",
+    "topic": "deep"
+  },
+  {
+    "id": 69,
+    "title": "Buffalo Chicken Dip",
+    "image": "image69.jpg",
+    "price": 5.0,
+    "isAvailable": true,
+    "description": "Spicy buffalo chicken dip with cheese.",
+    "topic": "deep"
+  },
+  {
+    "id": 70,
+    "title": "Queso",
+    "image": "image70.jpg",
+    "price": 4.0,
+    "isAvailable": true,
+    "description": "Melted cheese dip with peppers.",
+    "topic": "deep"
+  },
+  {
+    "id": 71,
+    "title": "Tzatziki",
+    "image": "image71.jpg",
+    "price": 3.5,
+    "isAvailable": true,
+    "description": "Greek yogurt dip with cucumber and garlic.",
+    "topic": "deep"
+  },
+  {
+    "id": 72,
+    "title": "Baba Ganoush",
+    "image": "image72.jpg",
+    "price": 4.0,
+    "isAvailable": true,
+    "description": "Smoky eggplant dip.",
+    "topic": "deep"
+  },
+  {
+    "id": 73,
+    "title": "Spaghetti Bolognese",
+    "image": "image73.jpg",
+    "price": 7.5,
+    "isAvailable": true,
+    "description": "Spaghetti with rich meat sauce.",
+    "topic": "pasta"
+  },
+  {
+    "id": 74,
+    "title": "Fettuccine Alfredo",
+    "image": "image74.jpg",
+    "price": 7.0,
+    "isAvailable": true,
+    "description": "Fettuccine pasta with creamy Alfredo sauce.",
+    "topic": "pasta"
+  },
+  {
+    "id": 75,
+    "title": "Penne Arrabbiata",
+    "image": "image75.jpg",
+    "price": 6.5,
+    "isAvailable": true,
+    "description": "Penne pasta with spicy tomato sauce.",
+    "topic": "pasta"
+  },
+  {
+    "id": 76,
+    "title": "Lasagna",
+    "image": "image76.jpg",
+    "price": 8.0,
+    "isAvailable": true,
+    "description": "Layered pasta with meat and cheese.",
+    "topic": "pasta"
+  },
+  {
+    "id": 77,
+    "title": "Pesto Pasta",
+    "image": "image77.jpg",
+    "price": 6.5,
+    "isAvailable": true,
+    "description": "Pasta with fresh basil pesto.",
+    "topic": "pasta"
+  },
+  {
+    "id": 78,
+    "title": "Ravioli",
+    "image": "image78.jpg",
+    "price": 7.5,
+    "isAvailable": true,
+    "description": "Stuffed pasta with cheese or meat.",
+    "topic": "pasta"
+  },
+  {
+    "id": 79,
+    "title": "Carbonara",
+    "image": "image79.jpg",
+    "price": 7.0,
+    "isAvailable": true,
+    "description": "Pasta with creamy egg and bacon sauce.",
+    "topic": "pasta"
+  },
+  {
+    "id": 80,
+    "title": "Mac and Cheese",
+    "image": "image80.jpg",
+    "price": 6.0,
+    "isAvailable": true,
+    "description": "Creamy macaroni and cheese.",
+    "topic": "pasta"
+  },
+  {
+    "id": 81,
+    "title": "Turkey Club Sandwich",
+    "image": "image81.jpg",
+    "price": 5.5,
+    "isAvailable": true,
+    "description": "Turkey sandwich with bacon, lettuce, and tomato.",
+    "topic": "sandwich"
+  },
+  {
+    "id": 82,
+    "title": "BLT Sandwich",
+    "image": "image82.jpg",
+    "price": 5.0,
+    "isAvailable": true,
+    "description": "Bacon, lettuce, and tomato sandwich.",
+    "topic": "sandwich"
+  },
+  {
+    "id": 83,
+    "title": "Chicken Caesar Wrap",
+    "image": "image83.jpg",
+    "price": 5.5,
+    "isAvailable": true,
+    "description": "Wrap with chicken, lettuce, and Caesar dressing.",
+    "topic": "sandwich"
+  },
+  {
+    "id": 84,
+    "title": "Ham and Cheese Sandwich",
+    "image": "image84.jpg",
+    "price": 4.5,
+    "isAvailable": true,
+    "description": "Ham and cheese on whole grain bread.",
+    "topic": "sandwich"
+  },
+  {
+    "id": 85,
+    "title": "Veggie Sandwich",
+    "image": "image85.jpg",
+    "price": 5.0,
+    "isAvailable": true,
+    "description": "Sandwich with fresh vegetables and hummus.",
+    "topic": "sandwich"
+  },
+  {
+    "id": 86,
+    "title": "Tuna Salad Sandwich",
+    "image": "image86.jpg",
+    "price": 5.5,
+    "isAvailable": true,
+    "description": "Tuna salad with lettuce and tomato.",
+    "topic": "sandwich"
+  },
+  {
+    "id": 87,
+    "title": "Grilled Cheese Sandwich",
+    "image": "image87.jpg",
+    "price": 4.0,
+    "isAvailable": true,
+    "description": "Classic grilled cheese on white bread.",
+    "topic": "sandwich"
+  },
+  {
+    "id": 88,
+    "title": "Roast Beef Sandwich",
+    "image": "image88.jpg",
+    "price": 6.0,
+    "isAvailable": true,
+    "description": "Roast beef with horseradish sauce.",
+    "topic": "sandwich"
+  },
+  {
+    "id": 89,
+    "title": "Lemon Water",
+    "image": "image89.jpg",
+    "price": 1.5,
+    "isAvailable": true,
+    "description": "Water infused with fresh lemon slices.",
+    "topic": "drinks"
+  },
+  {
+    "id": 90,
+    "title": "Mint Water",
+    "image": "image90.jpg",
+    "price": 1.5,
+    "isAvailable": true,
+    "description": "Water infused with fresh mint leaves.",
+    "topic": "drinks"
+  },
+  {
+    "id": 91,
+    "title": "Cucumber Water",
+    "image": "image91.jpg",
+    "price": 1.5,
+    "isAvailable": true,
+    "description": "Water infused with fresh cucumber slices.",
+    "topic": "drinks"
+  },
+  {
+    "id": 92,
+    "title": "Berry Infused Water",
+    "image": "image92.jpg",
+    "price": 2.0,
+    "isAvailable": true,
+    "description": "Water infused with mixed berries.",
+    "topic": "drinks"
+  },
+  {
+    "id": 93,
+    "title": "Iced Green Tea",
+    "image": "image93.jpg",
+    "price": 2.5,
+    "isAvailable": true,
+    "description": "Cold and refreshing green tea.",
+    "topic": "drinks"
+  },
+  {
+    "id": 94,
+    "title": "Herbal Tea",
+    "image": "image94.jpg",
+    "price": 2.0,
+    "isAvailable": true,
+    "description": "Soothing herbal tea.",
+    "topic": "drinks"
+  },
+  {
+    "id": 95,
+    "title": "Kombucha",
+    "image": "image95.jpg",
+    "price": 3.5,
+    "isAvailable": true,
+    "description": "Fermented and fizzy tea.",
+    "topic": "drinks"
+  },
+  {
+    "id": 96,
+    "title": "Sparkling Water",
+    "image": "image96.jpg",
+    "price": 2.5,
+    "isAvailable": true,
+    "description": "Refreshing sparkling water.",
+    "topic": "drinks"
+  }
+]
