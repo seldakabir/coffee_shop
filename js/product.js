@@ -115,7 +115,6 @@ const renderModal = function (product) {
     shop => shop.id === product.id
   );
   const isInShoppingList = indexInShoppingList !== -1;
-  console.log(isInShoppingList);
 
   const html = `
   <div class="layout hidden" data-product-id="${product.id}">
