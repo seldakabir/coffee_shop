@@ -2,6 +2,57 @@
   transition: all 0.2s;
 }
 
+/* app bar start */
+
+.appBar {
+  position: sticky;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #d5c3b2;
+  border: solid #6c6e5e 3px ;
+  border-radius: 20px;
+  overflow-x: hidden;
+}
+.buttonholder {
+  flex: 1;
+}
+
+.appBarButton {
+  display: flex;
+  align-items: center;
+  background-color: #9f9285;
+  border: none;
+  border-radius: 45px;
+  margin: 5px;
+}
+
+.iconholder {
+  padding: 7px ;
+}
+
+.textholder {
+  width: 150px;
+  padding: 0px 7px;
+  /* display: none; */
+}
+.appBarButton img {
+  width: 25px;
+  height: 30px;
+  color: transparent;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) hue-rotate(0deg);
+}
+
+.appBarButton p {
+  margin: 0;
+  font-size: 13px;
+  color: #fff;
+}
+
+
+
+/* app Bar end */
+
 .product {
   border: 1px solid #f00;
   margin-bottom: 0.5rem;
