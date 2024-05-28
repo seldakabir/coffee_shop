@@ -17,8 +17,8 @@
 .buttonholder {
   flex: 1;
 }
-
-.appBarButton {
+.buttonholder button {
+  outline: none;
   display: flex;
   align-items: center;
   background-color: #9f9285;
@@ -26,7 +26,6 @@
   border-radius: 45px;
   margin: 5px;
 }
-
 .iconholder {
   padding: 7px ;
 }
