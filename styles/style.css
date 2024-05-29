@@ -10,8 +10,9 @@
 .layout {
   width: 100vw;
   height: 100vh;
+  position: absolute;
   top: 0;
-  left: ;
+  left: 0;
   z-index: 5;
   backdrop-filter: blur(5px);
   display: flex;
@@ -41,7 +42,6 @@
   margin-left: 6.6%;
   margin-right: 5%;
   gap: 25%;
-
 }
 
 .layout.hidden .modal {
@@ -58,12 +58,10 @@
   overflow: hidden;
 }
 
-
 /*
 In case of unavailability 
 */
 .product--not-available {
-
   position: relative;
   backdrop-filter: blur(90px);
 }
@@ -72,8 +70,6 @@ In case of unavailability
   display: none;
   backdrop-filter: blur(3px);
   color: black;
-
-
 }
 
 .product--not-available .availability {
@@ -112,7 +108,6 @@ Buttons on product card
   height: 7.3rem;
 }
 
-
 .product {
   padding-right: 5%;
   padding-left: 5%;
@@ -129,7 +124,6 @@ Buttons on product card
   border: 1px solid rgb(250, 209, 209);
   width: 30%;
   height: 0.5px;
-
 }
 
 .title-of-sec {
@@ -140,7 +134,6 @@ Buttons on product card
 
 .h-title-of-sec {
   color: rgb(108, 108, 108);
-
 }
 
 .product-price {
@@ -150,7 +143,6 @@ Buttons on product card
 .product-title {
   font-size: 1.6rem;
 }
-
 
 .img-layout {
   width: 98%;
@@ -164,12 +156,11 @@ Buttons on product card
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #F5E5D7;
+  background-color: #f5e5d7;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   width: 87vw;
   height: 40vh;
   /* top: 5%; */
-
 }
 
 .layout--close {
@@ -194,8 +185,6 @@ Buttons on product card
   font-weight: bolder;
 }
 
-
-
 .div-layout-close {
   display: flex;
   justify-content: start;
@@ -214,14 +203,10 @@ Buttons on product card
   color: white;
   font-size: 1.2rem;
   line-height: 1px;
-
-
 }
 
 .product--decrease-btn {
   font-weight: bold;
-
-
 }
 
 .layout--decrease-btn,
@@ -229,7 +214,6 @@ Buttons on product card
   border-radius: 7px;
   background-color: transparent;
   padding: 5px;
-
 }
 
 .count {
@@ -262,7 +246,11 @@ Buttons on product card
 }
 
 .product--in-shopping-list {
-  background: linear-gradient(90deg, rgba(54, 54, 54, 1) 19%, rgba(175, 171, 171, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(54, 54, 54, 1) 19%,
+    rgba(175, 171, 171, 1) 100%
+  );
 }
 
 .layout--order-btn {
