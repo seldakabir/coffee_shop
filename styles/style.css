@@ -41,7 +41,7 @@
   align-items: center;
   margin-left: 6.6%;
   margin-right: 5%;
-  gap: 25%;
+  gap: 15%;
 }
 
 .layout.hidden .modal {
@@ -64,16 +64,13 @@ In case of unavailability
 .product--not-available {
   position: relative;
   backdrop-filter: blur(90px);
-  background: linear-gradient(90deg,
-      rgba(54, 54, 54, 1) 19%,
-      rgba(175, 171, 171, 1) 100%);
+  background: linear-gradient(90deg, rgba(114, 115, 99, 1) 19%, rgba(175, 172, 171, 1) 100%);
 }
 
 .availability {
   display: none;
   backdrop-filter: blur(3px);
   color: black;
-
 }
 
 .product--not-available .availability {
@@ -142,6 +139,7 @@ Buttons on product card
 
 .product-price {
   display: flex;
+  font-weight: bolder;
 }
 
 .product-title {
@@ -190,9 +188,8 @@ Buttons on product card
 }
 
 .div-layout-close {
-  display: flex;
-  justify-content: start;
-  align-items: start;
+  border-radius: 10px;
+  background-color: rgba(255, 0, 0, 0.452);
 }
 
 .product--decrease-btn,
@@ -250,9 +247,7 @@ Buttons on product card
 }
 
 .product--in-shopping-list {
-  background: linear-gradient(90deg,
-      rgba(54, 54, 54, 1) 19%,
-      rgba(175, 171, 171, 1) 100%);
+  background: linear-gradient(90deg, rgba(114, 115, 99, 1) 19%, rgba(175, 172, 171, 1) 100%);
   position: relative;
 }
 
