@@ -8,13 +8,27 @@
   position: sticky;
   top: 10px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: #d5c3b2;
   border: solid #6c6e5e 3px ;
   border-radius: 20px;
   overflow-x: hidden;
+  gap: 10rem;
 }
+
+  .swiper, swiper-container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    display: block;
+    
+}
+
 .buttonholder {
   flex: 1;
 }
