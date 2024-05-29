@@ -6,6 +6,8 @@ const buttonHolder=document.getElementsByClassName("buttonholder")
 const textHolder=document.getElementsByClassName("textholder")
 const buttonsArray = Array.from(buttonHolder);
 const textHolders = Array.from(textHolder);
+const swipePosition=document.querySelector(".swipe-position")
+let translateX = 0;
 
 App.renderAllProducts();
 
@@ -46,23 +48,49 @@ buttonsArray.forEach(button => {
             textHolder.style.display = "flex";
         }
       }
+      
+      
+      buttonsArray.forEach((btn,index) => {
+      
+        
+        const matrix = new WebKitCSSMatrix(swipePosition.style.transform);
+        const currentX = matrix.m41; 
+if(index===buttonsArray.length-1){
+  const newTranslateX = currentX + 20;
+  swipePosition.style.transform = `translate3d(${newTranslateX}px, 0px, 0px)`;
+}
+else{
+   
+    const newTranslateX = currentX - 20;
+    swipePosition.style.transform = `translate3d(${newTranslateX}px, 0px, 0px)`;
+}
+    
+       
+      
+    });
   })
 });
 
 //swiper of menu bar
+
 const swiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
-  
-  
 
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
+
+
 
  
 
- 
 });
+    
+let currentTranslateX = 0;
+
+// Update Swiper's transform directly
+function updateSwiperTranslate(translateX) {
+    swiper.wrapperEl.style.transform = `translate3d(${translateX}px, 0, 0)`;
+}
+updateSwiperTranslate(553)
+  
+

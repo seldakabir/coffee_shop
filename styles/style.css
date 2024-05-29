@@ -14,7 +14,7 @@
   border: solid #6c6e5e 3px ;
   border-radius: 20px;
   overflow-x: hidden;
-  gap: 10rem;
+  gap: 5rem;
   overflow-y: scroll;
   max-width: calc(100% - 1rem);
   width: 100%;
@@ -44,11 +44,17 @@
 .swipe-position{
   cursor: grab;
   transition-duration: 0ms;
-  transform: translate3d(2679.17px, 0px, 0px);
+  transform: translate3d(535.833px, 0px, 0px);
+  -webkit-transform: translate3d(535.833px, 0px, 0px);
+  -moz-transform: translate3d(535.833px, 0px, 0px);
+  -ms-transform: translate3d(535.833px, 0px, 0px);
+  -o-transform: translate3d(535.833px, 0px, 0px);
 }
 
 .buttonholder {
   flex: 1;
+  transition: left 0.3s; 
+
 }
 .buttonholder button {
   outline: none;
