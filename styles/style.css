@@ -34,7 +34,7 @@
 .textholder {
   width: 150px;
   padding: 0px 7px;
-  /* display: none; */
+  display: none;
 }
 .appBarButton img {
   width: 25px;
