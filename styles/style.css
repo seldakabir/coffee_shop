@@ -64,12 +64,16 @@ In case of unavailability
 .product--not-available {
   position: relative;
   backdrop-filter: blur(90px);
+  background: linear-gradient(90deg,
+      rgba(54, 54, 54, 1) 19%,
+      rgba(175, 171, 171, 1) 100%);
 }
 
 .availability {
   display: none;
   backdrop-filter: blur(3px);
   color: black;
+
 }
 
 .product--not-available .availability {
@@ -93,7 +97,7 @@ Buttons on product card
 .product-buttons {
   display: none;
   position: absolute;
-  left: 5px;
+  left: -1.2%;
   width: 30px;
   border-radius: 50%;
 }
@@ -246,11 +250,10 @@ Buttons on product card
 }
 
 .product--in-shopping-list {
-  background: linear-gradient(
-    90deg,
-    rgba(54, 54, 54, 1) 19%,
-    rgba(175, 171, 171, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(54, 54, 54, 1) 19%,
+      rgba(175, 171, 171, 1) 100%);
+  position: relative;
 }
 
 .layout--order-btn {
