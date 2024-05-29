@@ -9,12 +9,19 @@
   top: 10px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   background-color: #d5c3b2;
   border: solid #6c6e5e 3px ;
   border-radius: 20px;
   overflow-x: hidden;
   gap: 10rem;
+  overflow-y: scroll;
+  max-width: calc(100% - 1rem);
+  width: 100%;
+  scrollbar-width: none;
+
+
+
 }
 
   .swiper, swiper-container {
@@ -27,6 +34,17 @@
     z-index: 1;
     display: block;
     
+}
+.pl-5{
+  padding-left: 30rem !important;
+}
+.g-5{
+  gap: 10rem !important;
+}
+.swipe-position{
+  cursor: grab;
+  transition-duration: 0ms;
+  transform: translate3d(2679.17px, 0px, 0px);
 }
 
 .buttonholder {
