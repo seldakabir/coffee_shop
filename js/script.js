@@ -1,4 +1,5 @@
 import App from './product.js';
+import './shoppingListModal.js';
 
 // Selectors
 const main = document.querySelector('.main');
