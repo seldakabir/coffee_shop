@@ -13,6 +13,7 @@
   border: solid #6c6e5e 3px;
   border-radius: 20px;
   overflow-x: hidden;
+  z-index: 1;
 }
 .buttonholder {
   flex: 1;
@@ -128,9 +129,9 @@ In case of unavailability
 .product--not-available .availability {
   display: block;
   position: absolute;
-  z-index: 50;
   top: 0;
-  left: -10px;
+  left: 0;
+  padding: 0 1rem;
   width: 100%;
   height: 100%;
   text-align: end;
@@ -332,7 +333,7 @@ Buttons on product card
 .open-shopping-list {
   padding: 0.7rem 1rem;
   margin: 1rem;
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 3rem;
   height: 3rem;
@@ -361,8 +362,7 @@ Buttons on product card
 }
 
 .shopping-list-modal {
-  min-width: 70%;
-  max-width: 400px;
+  width: 30rem; /* Not responsive #f00 */
   height: 70vh;
   position: fixed;
   top: 50%;
