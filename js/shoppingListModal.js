@@ -1,3 +1,5 @@
+import scrollFix from './replaceRemovedScrollBar.js';
+
 // Selectors
 const btnOpenModal = document.querySelector('.open-shopping-list');
 const modal = document.querySelector('.shopping-list-modal');
@@ -10,6 +12,8 @@ const closeModal = function () {
   overlay.classList.add('shopping-list__overlay--hidden');
 
   modal.classList.add('shopping-list-modal--hidden');
+
+  scrollFix.removeScrollPadding();
 };
 
 const openModal = function () {
@@ -18,6 +22,8 @@ const openModal = function () {
   overlay.classList.remove('shopping-list__overlay--hidden');
 
   modal.classList.remove('shopping-list-modal--hidden');
+
+  scrollFix.addScrollPadding();
 };
 
 const toggleModalBtn = function (btnContainer) {
