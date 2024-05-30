@@ -1,4 +1,5 @@
 import data from './fetch-data.js';
+import scrollBarFix from './replaceRemovedScrollBar.js';
 
 const sections = document.querySelectorAll('.section');
 const layout = document.getElementsByClassName('layout');
@@ -132,6 +133,8 @@ const openModal = async function (product) {
 
   document.body.classList.add('disable-scroll');
 
+  scrollBarFix.addScrollPadding();
+
   // Close modal
   const btnCloseModal = layout[0].querySelector('.layout--close');
 
@@ -164,6 +167,8 @@ const closeModal = function () {
   layout[0].remove();
 
   document.body.classList.remove('disable-scroll');
+
+  scrollBarFix.removeScrollPadding();
 };
 
 const findInData = id => data.find(data => data.id === +id);

@@ -10,9 +10,10 @@
   justify-content: space-around;
   align-items: center;
   background-color: #d5c3b2;
-  border: solid #6c6e5e 3px ;
+  border: solid #6c6e5e 3px;
   border-radius: 20px;
   overflow-x: hidden;
+  z-index: 1;
 }
 .buttonholder {
   flex: 1;
@@ -27,7 +28,7 @@
   margin: 5px;
 }
 .iconholder {
-  padding: 7px ;
+  padding: 7px;
 }
 
 .textholder {
@@ -47,8 +48,6 @@
   font-size: 13px;
   color: #fff;
 }
-
-
 
 /* app Bar end */
 
@@ -130,9 +129,9 @@ In case of unavailability
 .product--not-available .availability {
   display: block;
   position: absolute;
-  z-index: 50;
   top: 0;
-  left: -10px;
+  left: 0;
+  padding: 0 1rem;
   width: 100%;
   height: 100%;
   text-align: end;
@@ -319,4 +318,86 @@ Buttons on product card
   visibility: hidden;
   opacity: 0;
   display: none;
+}
+
+.product:not(.product--not-available) {
+  cursor: pointer;
+}
+
+/*
+
+ Shopping List Modal
+
+*/
+
+.open-shopping-list {
+  padding: 0.7rem 1rem;
+  margin: 1rem;
+  position: fixed;
+  top: 0;
+  width: 3rem;
+  height: 3rem;
+  z-index: 4;
+}
+
+.open-shopping-list__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 1.5rem;
+  height: 1.5rem;
+  visibility: visible;
+  transform: translate(-50%, -50%);
+
+  transition: all 0.3s;
+  opacity: 1;
+  /* transform: translate(-50%, -50%) rotateZ(0) scale(1); */
+}
+
+.open-shopping-list__icon--hidden {
+  visibility: hidden;
+  opacity: 0;
+  /* transform: translate(-50%, -50%) rotateZ(1440deg) scale(0.7); */
+}
+
+.shopping-list-modal {
+  width: 30rem; /* Not responsive #f00 */
+  height: 70vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  z-index: 5;
+
+  background-color: blue;
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+
+  transition: opacity 0.3s 0.2s, transform 0.3s 0.2s;
+}
+
+.shopping-list-modal--hidden {
+  visibility: hidden;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.7);
+}
+
+.shopping-list__overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  transition: opacity 0.3s;
+
+  backdrop-filter: blur(2px);
+}
+
+.shopping-list__overlay--hidden {
+  visibility: hidden;
+  opacity: 0;
 }
