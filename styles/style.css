@@ -336,7 +336,7 @@ Buttons on product card
   top: 0;
   width: 3rem;
   height: 3rem;
-  z-index: 5;
+  z-index: 4;
 }
 
 .open-shopping-list__icon {
