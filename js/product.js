@@ -20,30 +20,6 @@ let shoppingList = getListFromLocalStorage() || [];
 ////////////////////////
 // Funcitons
 
-const createProductBtns = function () {
-  const container = document.createElement('div');
-  const btns = [
-    document.createElement('button'),
-    document.createElement('button'),
-  ];
-
-  btns[0].classList.add('product--increase-btn');
-  btns[0].addEventListener(
-    'click',
-    increaseProduct(btns[0].closest('.product').dataset.id)
-  );
-
-  btns[1].classList.add('product--decrease-btn');
-  btns[1].addEventListener(
-    'click',
-    decreaseProduct(btns[0].closest('.product').dataset.id)
-  );
-
-  btns.forEach(btn => container.append(btn));
-
-  return container;
-};
-
 const renderAllProducts = function () {
   sections.forEach(section => {
     section.innerHTML = '';
@@ -56,34 +32,32 @@ const renderAllProducts = function () {
         );
 
         const html = `
-          <div class="product${
-            product.isAvailable ? '' : ' product--not-available'
-          }${
+        <div class="product${
+          product.isAvailable ? '' : ' product--not-available'
+        }${
           isInShoppingList !== undefined ? ' product--in-shopping-list' : ''
         }" data-id="${product.id}">
-            <p class="availability">unavailable</p>
-            <div class="product-buttons ${
-              product.isAvailable ? '' : ' hidden'
-            }">
-                <button class="product--increase-btn">${
-                  isInShoppingList
-                    ? shoppingList[findIndexInShoppingList(product.id)].count
-                    : ''
-                }</button>
-                <button class="product--decrease-btn">mines</button>
-            </div>
-            <img src="${
-              product.image
-            }" alt="${product.title.toLowerCase()} picture" />
-            <div>
-              <h3>${product.title}</h3>
-              <p>${product.description}</p>
-              <div>
-                <p>${product.price}</p>
-                <p>usd</p>
-              </div>
-            </div>
-          </div>`;
+        <p class="availability">Unavailable</p>
+        <div class="product-buttons ${product.isAvailable ? '' : ' hidden'}">
+            <button class="product--increase-btn">${
+              isInShoppingList
+                ? shoppingList[findIndexInShoppingList(product.id)].count
+                : ''
+            }</button>
+            <button class="product--decrease-btn">-</button>
+        </div>
+        <img class="image" src="${
+          product.image
+        }" alt="${product.title.toLowerCase()} picture" />
+        <div>
+          <h3 class="product-title">${product.title}</h3>
+          <p>${product.description}</p>
+          <div class="product-price">
+            <p>${product.price}</p>
+            <p>usd</p>
+          </div>
+        </div>
+      </div>`;
 
         section.insertAdjacentHTML('beforeend', html);
       });
@@ -118,28 +92,32 @@ const renderModal = function (product) {
 
   const html = `
   <div class="layout hidden" data-product-id="${product.id}">
-    <div><button class="layout--close">X</button></div>
-    <img src="${product.image}" alt="${product.title.toLowerCase()} picture" />
+  <div class="div-layout-close"><button class="layout--close">X</button></div>
+  <div class="div-img-layout"><img class="img-layout" src="${
+    product.image
+  }" alt="${product.title.toLowerCase()} picture" /></div>
 
-    <div class="modal">
-      <div>
-        <h3>${product.title}</h3>
-        <br />
-        <p>${product.description}</p>
-      </div>
+  <div class="modal">
+    <div>
+      <h3>${product.title}</h3>
+      <br />
+      <p>${product.description}</p>
+    </div>
 
-      <div class="layout__btns">
-        <button class="${
-          isInShoppingList ? ' hidden' : ''
-        } layout--order-btn">order</button>
-        <div class="${!isInShoppingList ? ' hidden' : ''}">
-          <button class="layout--decrease-btn">mines</button>
-          <p class="count">${shoppingList[indexInShoppingList]?.count}</p>
-          <button class="layout--increase-btn">pluse</button>
-        </div>
+    <div class="layout__btns">
+      <button class="${
+        isInShoppingList ? ' hidden' : ''
+      } layout--order-btn">order</button>
+      <div class="${!isInShoppingList ? ' hidden' : ''} div-mines-pluse">
+        <button class="layout--decrease-btn">mines</button>
+        <div class="div-count"><span class="count">${
+          shoppingList[indexInShoppingList]?.count
+        }</span></div>
+        <button class="layout--increase-btn">pluse</button>
       </div>
     </div>
-  </div>`;
+  </div>
+</div>`;
 
   document.body.insertAdjacentHTML('afterbegin', html);
 };
@@ -206,6 +184,14 @@ const toggleLayoutBtn = function (btn) {
   );
 };
 
+const updateProductLabel = function (productId, indexInShoppingList) {
+  const counterLable = document
+    .querySelector(`[data-id= '${productId}']`)
+    .querySelector('.product--increase-btn');
+
+  counterLable.textContent = shoppingList[indexInShoppingList]?.count;
+};
+
 //////////////////////////////
 // Shopping List
 
@@ -244,7 +230,7 @@ const increaseProduct = function (productId) {
 
   updateLayoutCounter(shoppingList[productIndex].count);
 
-  renderAllProducts();
+  updateProductLabel(productId, productIndex);
 
   saveListToLocalStorage();
 };
@@ -270,7 +256,7 @@ const decreaseProduct = function (productId) {
     updateLayoutCounter(shoppingList[productIndex].count);
   }
 
-  renderAllProducts();
+  updateProductLabel(productId, productIndex);
 
   saveListToLocalStorage();
 };
@@ -282,4 +268,3 @@ export default {
   decreaseProduct,
   shoppingList,
 };
-// console.log(createProductBtns());
