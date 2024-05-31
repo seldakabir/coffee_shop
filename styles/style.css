@@ -3,17 +3,50 @@
 
 /* app bar start */
 
+
 .appBar {
   position: sticky;
   top: 10px;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-end;
   background-color: #d5c3b2;
-  border: solid #6c6e5e 3px;
+  border: solid #6c6e5e 3px ;
   border-radius: 20px;
   overflow-x: hidden;
+  gap: 4rem;
+  overflow-y: scroll;
+  max-width: calc(100% - 1rem);
+  width: 100%;
+  scrollbar-width: none;
+  z-index: 2;
+
+}
+.swiper, swiper-container {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
   z-index: 1;
+  display: block;
+  
+}
+.pl-5{
+padding-left: 30rem !important;
+}
+.g-5{
+gap: 10rem !important;
+}
+.swipe-position{
+cursor: grab;
+transition-duration: 1000ms;
+transform: translate3d(535.833px, 0px, 0px);
+-webkit-transform: translate3d(535.833px, 0px, 0px);
+-moz-transform: translate3d(535.833px, 0px, 0px);
+-ms-transform: translate3d(535.833px, 0px, 0px);
+-o-transform: translate3d(535.833px, 0px, 0px);
 }
 .buttonholder {
   flex: 1;
@@ -34,7 +67,7 @@
 .textholder {
   width: 150px;
   padding: 0px 7px;
-  /* display: none; */
+  display: none;
 }
 .appBarButton img {
   width: 25px;
