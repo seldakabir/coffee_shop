@@ -1,5 +1,4 @@
-* {
-}
+* {}
 
 /* app bar start */
 
@@ -15,9 +14,11 @@
   overflow-x: hidden;
   z-index: 1;
 }
+
 .buttonholder {
   flex: 1;
 }
+
 .buttonholder button {
   outline: none;
   display: flex;
@@ -27,6 +28,7 @@
   border-radius: 45px;
   margin: 5px;
 }
+
 .iconholder {
   padding: 7px;
 }
@@ -36,6 +38,7 @@
   padding: 0px 7px;
   /* display: none; */
 }
+
 .appBarButton img {
   width: 25px;
   height: 30px;
@@ -113,11 +116,9 @@ In case of unavailability
 .product--not-available {
   position: relative;
   backdrop-filter: blur(90px);
-  background: linear-gradient(
-    90deg,
-    rgba(114, 115, 99, 1) 19%,
-    rgba(175, 172, 171, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(114, 115, 99, 1) 19%,
+      rgba(175, 172, 171, 1) 100%);
 }
 
 .availability {
@@ -300,11 +301,9 @@ Buttons on product card
 }
 
 .product--in-shopping-list {
-  background: linear-gradient(
-    90deg,
-    rgba(114, 115, 99, 1) 19%,
-    rgba(175, 172, 171, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(114, 115, 99, 1) 19%,
+      rgba(175, 172, 171, 1) 100%);
   position: relative;
 }
 
@@ -362,7 +361,8 @@ Buttons on product card
 }
 
 .shopping-list-modal {
-  width: 30rem; /* Not responsive #f00 */
+  width: 30rem;
+  /* Not responsive #f00 */
   height: 70vh;
   position: fixed;
   top: 50%;
@@ -400,4 +400,151 @@ Buttons on product card
 .shopping-list__overlay--hidden {
   visibility: hidden;
   opacity: 0;
+}
+
+.shopping-list-section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.shopping-box {
+  width: 40vw;
+  min-width: 300px;
+  height: 80vh;
+  background-color: rgb(255, 219, 219);
+  border-radius: 10px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20PX 0PX;
+  position: relative;
+}
+
+.header-of-shopping-list {
+  font-size: 1.3rem;
+  font-weight: bold;
+  top: 0;
+  position: absolute;
+  margin-bottom: 50px;
+}
+
+.products-in-shopping-list {
+  width: 90%;
+
+  height: 80px;
+  border: 1px solid black;
+  border-radius: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 10PX;
+  margin-top: 30px;
+
+}
+
+.right-product {
+  width: 35%;
+}
+
+.about-product {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.detail-product {
+  width: 90%;
+
+
+  display: flex;
+  gap: 10px;
+
+}
+
+.photo-of-product {
+  width: 60px;
+  height: 60px;
+  border-radius: 10PX;
+}
+
+.photo-of-product2 {
+  width: 50%;
+}
+
+
+.left-product {
+  width: 65%;
+  margin-left: 15px;
+}
+
+
+.btn-box {
+  border: 1px solid black;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+  padding: 1px 5px;
+  background-color: #e8e8e8;
+}
+
+.mines-btn {
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  line-height: 1.2px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.pluse-btn {
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  line-height: 2px;
+  padding: 1px 1.5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+}
+
+.total-price-in-shopping-list {
+  background-color: #6c6e5e;
+  width: 90%;
+  height: 55px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  color: white;
+}
+
+.shopping-box-close-svg {
+  border: none;
+  background-color: transparent;
+}
+
+
+.close-svg {
+  width: 20px;
+  height: 20px;
+}
+
+.open-shopping-list {
+  border-radius: 50%;
+  background-color: #6c6e5e;
+  color: white;
 }
