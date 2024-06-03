@@ -51,27 +51,27 @@ console.log(shoppingList.shoppingList);
   generateProductOrder()
 });
 //increase order count
-plusBtn.addEventListener("click",()=>{
 
- 
-    count++
-    orderCount.innerHTML=count
+//   basketList.forEach((product)=>{
+//     plusBtn.addEventListener("click",()=>{ 
+//     product.count++
   
-
-})
+//     // orderCount.innerHTML=count
+//   })
+// })
 //decrease order count
-minesBtn.addEventListener("click",()=>{
+// minesBtn.addEventListener("click",()=>{
 
-if(count>0){
-  count--
+// if(count>0){
+//   count--
 
-}
- else{
-  count=0
+// }
+//  else{
+//   count=0
   
- }
- orderCount.innerHTML=count
-})
+//  }
+//  orderCount.innerHTML=count
+// })
 
 
 
@@ -80,8 +80,9 @@ if(count>0){
 //show order products
 function generateProductOrder(){
 // if(shoppingList!==null){
-basketList.forEach((product)=>{
+basketList.forEach((product,index)=>{
   console.log(product);
+
   let shop=` <div class="products-in-shopping-list">
 
   <div class="left-product">
@@ -101,7 +102,7 @@ basketList.forEach((product)=>{
         </div>
         <div class="price-product">
         
-          <span>${product.product.price}dollars</span>
+          <span>${product.product.price} dollars</span>
         </div>
       </div>
       <div class="photo-of-product2">
@@ -113,7 +114,34 @@ basketList.forEach((product)=>{
   </div>
 </div>`
 let lastChildShop=shoppingBox.lastElementChild
-lastChildShop.insertAdjacentHTML('beforebegin',shop)
+if (lastChildShop) {
+  lastChildShop.insertAdjacentHTML('beforebegin', shop);
+} else {
+  shoppingBox.insertAdjacentHTML('afterbegin', shop);
+}
+
+const productElement = shoppingBox.querySelectorAll('.products-in-shopping-list')[index];
+
+ 
+      const plusBtn = productElement.querySelector('.pluse-btn');
+      const orderCount = productElement.querySelector('.order-count');
+      const minesBtn = productElement.querySelector('.mines-btn');
+      plusBtn.addEventListener('click', () => {
+        product.count++;
+        orderCount.textContent = product.count;
+      
+      });
+      minesBtn.addEventListener('click', () => {
+        if(product.count>0){
+          product.count--;
+          orderCount.textContent = product.count;
+        }
+      // else{
+      //   console.log(shoppingList);
+      
+      // }
+      
+      });
 
 })
 // }
