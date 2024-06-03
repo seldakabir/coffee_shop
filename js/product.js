@@ -17,7 +17,7 @@ const getListFromLocalStorage = function () {
 ////////////////////////
 // Shopping List
 let shoppingList = getListFromLocalStorage() || [];
-
+// console.log(shoppingList);
 ////////////////////////
 // Funcitons
 

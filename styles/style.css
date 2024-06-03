@@ -196,6 +196,7 @@ Buttons on product card
   font-weight: bolder;
 }
 
+
 .product-title {
   font-size: 1.6rem;
 }
@@ -450,7 +451,7 @@ Buttons on product card
 }
 
 .right-product {
-  width: 35%;
+  width: 50%;
 }
 
 .about-product {
@@ -481,7 +482,10 @@ Buttons on product card
 .left-product {
   width: 65%;
   margin-left: 15px;
+  display: flex;
+  gap: 2rem;
 }
+
 
 
 .btn-box {

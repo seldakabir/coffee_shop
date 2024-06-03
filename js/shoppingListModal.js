@@ -1,5 +1,5 @@
 import scrollFix from './replaceRemovedScrollBar.js';
-
+import shoppingList from "./product.js"
 // Selectors
 const btnOpenModal = document.querySelector('.open-shopping-list');
 const modal = document.querySelector('.shopping-list-modal');
@@ -8,7 +8,8 @@ const plusBtn=document.querySelector('.pluse-btn');
 const minesBtn=document.querySelector('.mines-btn');
 const orderCount=document.querySelector('.order-count');
 let count=0
-let userBasket=[]
+const shoppingBox=document.querySelector('.shopping-box')
+const basketList=Array.from(shoppingList.shoppingList)
 // Functions
 const closeModal = function () {
   document.body.classList.remove('disable-scroll');
@@ -39,6 +40,7 @@ const toggleModalBtn = function (btnContainer) {
 // Events
 
 btnOpenModal.addEventListener('click', function () {
+console.log(shoppingList.shoppingList);
   const isModalClose = modal.classList.contains('shopping-list-modal--hidden');
 
   if (isModalClose) openModal();
@@ -46,6 +48,7 @@ btnOpenModal.addEventListener('click', function () {
   if (!isModalClose) closeModal();
 
   toggleModalBtn(this);
+  generateProductOrder()
 });
 //increase order count
 plusBtn.addEventListener("click",()=>{
@@ -70,6 +73,49 @@ if(count>0){
  orderCount.innerHTML=count
 })
 
-//show order products
 
+
+
+
+//show order products
+function generateProductOrder(){
+// if(shoppingList!==null){
+basketList.forEach((product)=>{
+  console.log(product);
+  let shop=` <div class="products-in-shopping-list">
+
+  <div class="left-product">
+    <div class="btn-box">
+      <button type="button" class="mines-btn">-</button>
+      <span class="order-count">${product.count}</span>
+      <button type="button" class="pluse-btn">+</button>
+    </div>
+
+  </div>
+  <div class="right-product">
+    <div class="detail-product">
+
+      <div class="about-product">
+        <div class="name-product">
+          <p>${product.product.title}</p>
+        </div>
+        <div class="price-product">
+        
+          <span>${product.product.price}dollars</span>
+        </div>
+      </div>
+      <div class="photo-of-product2">
+        <img class="photo-of-product"
+          src=${product.product.image}
+          alt="coffee">
+      </div>
+    </div>
+  </div>
+</div>`
+let lastChildShop=shoppingBox.lastElementChild
+lastChildShop.insertAdjacentHTML('beforebegin',shop)
+
+})
+// }
+}
 
