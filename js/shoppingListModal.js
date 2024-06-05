@@ -61,6 +61,7 @@ btnOpenModal.addEventListener('click', function () {
 //show order products
 
 function generateProductOrder(basketList) {
+ updateTotalPrice()
 console.log(app.shoppingList);
   let totalPrice = 0;
   productList.innerHTML = '';
@@ -113,12 +114,10 @@ console.log(app.shoppingList);
       minesBtn.addEventListener('click', () => {
         
         app.decreaseProduct(app.shoppingList[index]?.id);
-        if (app.shoppingList[index]?.count === 0) {
-          app.shoppingList.splice(index, 1);
-        } else {
+      
           orderCount.textContent = app.shoppingList[index]?.count;
           updateTotalPrice();
-        }
+        
         if(!app.shoppingList[index]){
           generateProductOrder(app.shoppingList);
           // console.log('product removed');
