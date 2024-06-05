@@ -1,5 +1,7 @@
 import scrollFix from './replaceRemovedScrollBar.js';
 import shoppingList from "./product.js"
+import app from './product.js'
+
 // Selectors
 const btnOpenModal = document.querySelector('.open-shopping-list');
 const modal = document.querySelector('.shopping-list-modal');
@@ -9,7 +11,9 @@ const minesBtn=document.querySelector('.mines-btn');
 const orderCount=document.querySelector('.order-count');
 let count=0
 const shoppingBox=document.querySelector('.shopping-box')
-const basketList=Array.from(shoppingList.shoppingList)
+const productList=document.querySelector('.product-list')
+let basketList=Array.from(app.shoppingList)
+const totalProductPrice=document.querySelector('.total-price')
 // Functions
 const closeModal = function () {
   document.body.classList.remove('disable-scroll');
@@ -40,7 +44,9 @@ const toggleModalBtn = function (btnContainer) {
 // Events
 
 btnOpenModal.addEventListener('click', function () {
-console.log(shoppingList.shoppingList);
+
+ 
+
   const isModalClose = modal.classList.contains('shopping-list-modal--hidden');
 
   if (isModalClose) openModal();
@@ -48,42 +54,25 @@ console.log(shoppingList.shoppingList);
   if (!isModalClose) closeModal();
 
   toggleModalBtn(this);
-  generateProductOrder()
+  generateProductOrder(basketList)
 });
-//increase order count
-
-//   basketList.forEach((product)=>{
-//     plusBtn.addEventListener("click",()=>{ 
-//     product.count++
-  
-//     // orderCount.innerHTML=count
-//   })
-// })
-//decrease order count
-// minesBtn.addEventListener("click",()=>{
-
-// if(count>0){
-//   count--
-
-// }
-//  else{
-//   count=0
-  
-//  }
-//  orderCount.innerHTML=count
-// })
-
-
-
 
 
 //show order products
-function generateProductOrder(){
-// if(shoppingList!==null){
-basketList.forEach((product,index)=>{
-  console.log(product);
 
-  let shop=` <div class="products-in-shopping-list">
+function generateProductOrder(basketList){
+  let totalPrice=0
+  productList.innerHTML=''
+ if(app.shoppingList!==null){
+  
+  app.shoppingList.forEach((product,index)=>{
+  // console.log(product);
+totalPrice+=Number(product.count)*Number(product.product.price)
+console.log(product.count);
+console.log(product.product.price);
+
+  let shop=`
+   <div class="products-in-shopping-list">
 
   <div class="left-product">
     <div class="btn-box">
@@ -112,38 +101,53 @@ basketList.forEach((product,index)=>{
       </div>
     </div>
   </div>
-</div>`
-let lastChildShop=shoppingBox.lastElementChild
-if (lastChildShop) {
-  lastChildShop.insertAdjacentHTML('beforebegin', shop);
-} else {
-  shoppingBox.insertAdjacentHTML('afterbegin', shop);
-}
 
-const productElement = shoppingBox.querySelectorAll('.products-in-shopping-list')[index];
+`
+// let lastChildShop=shoppingBox.lastElementChild
+// if (lastChildShop) {
+//   lastChildShop.insertAdjacentHTML('beforebegin', shop);
+// } else {
+//   shoppingBox.insertAdjacentHTML('afterbegin', shop);
+// }
+productList.insertAdjacentHTML('afterbegin',shop)
+totalProductPrice.innerHTML=totalPrice
+const productElement = productList.querySelectorAll('.products-in-shopping-list')[index];
 
- 
+
       const plusBtn = productElement.querySelector('.pluse-btn');
       const orderCount = productElement.querySelector('.order-count');
       const minesBtn = productElement.querySelector('.mines-btn');
       plusBtn.addEventListener('click', () => {
-        product.count++;
-        orderCount.textContent = product.count;
+       app.increaseProduct(product.id)
       
+        orderCount.textContent = product.count;
+        totalPrice=0
+        totalPrice+=Number(orderCount.textContent)*Number(product.product.price)
+        totalProductPrice.innerHTML=totalPrice
       });
       minesBtn.addEventListener('click', () => {
         if(product.count>0){
-          product.count--;
+         app.decreaseProduct(product.id)
           orderCount.textContent = product.count;
+          totalPrice=0
+          totalPrice+=Number(orderCount.textContent)*Number(product.product.price)
+          totalProductPrice.innerHTML=totalPrice
         }
-      // else{
-      //   console.log(shoppingList);
+      else if(product.count<=1){
+        const productIndex = findIndexInShoppingList(product.id);
+        // shoppingList.splice(productIndex, 1);
+        
+        generateProductOrder()
+        saveListToLocalStorage()
+      }
       
-      // }
+      })
       
       });
+    }else{
 
-})
+    }
+
 // }
 }
 

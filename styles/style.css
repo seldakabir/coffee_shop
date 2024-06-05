@@ -363,20 +363,20 @@ Buttons on product card
 
 .shopping-list-modal {
   width: 30rem;
-  /* Not responsive #f00 */
-  height: 70vh;
-  position: fixed;
+  /*Notresponsive#f00*//*height: 70vh;
+  */position: fixed;
   top: 50%;
   left: 50%;
-
   z-index: 5;
-
-  /* background-color: blue; */
-  visibility: visible;
+  /*background-color: blue;
+  */visibility: visible;
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
-
   transition: opacity 0.3s 0.2s, transform 0.3s 0.2s;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  -moz-transform: translate(-50%, -50%) scale(1);
+  -ms-transform: translate(-50%, -50%) scale(1);
+  -o-transform: translate(-50%, -50%) scale(1);
 }
 
 .shopping-list-modal--hidden {
@@ -426,6 +426,7 @@ Buttons on product card
   align-items: center;
   padding: 20PX 0PX;
   position: relative;
+  overflow: auto;
 }
 
 .header-of-shopping-list {
@@ -435,7 +436,11 @@ Buttons on product card
   position: absolute;
   margin-bottom: 50px;
 }
-
+.product-list{
+  width: 90%;
+  padding-right: 10PX;
+  margin-top: 30px;
+}
 .products-in-shopping-list {
   width: 90%;
 

@@ -19,4 +19,9 @@ main.addEventListener('click', function (e) {
     return;
 
   App.openModal(product);
+
+
 });
+App.shoppingList;
+// App.increaseProduct(id);
+// App.decreaseProduct(id);
