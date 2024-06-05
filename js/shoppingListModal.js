@@ -54,100 +54,81 @@ btnOpenModal.addEventListener('click', function () {
   if (!isModalClose) closeModal();
 
   toggleModalBtn(this);
-  generateProductOrder(basketList)
+  generateProductOrder(app.shoppingList)
 });
 
 
 //show order products
 
-function generateProductOrder(basketList){
-  let totalPrice=0
-  productList.innerHTML=''
- if(app.shoppingList!==null){
-  
-  app.shoppingList.forEach((product,index)=>{
-  // console.log(product);
-totalPrice+=Number(product.count)*Number(product.product.price)
-console.log(product.count);
-console.log(product.product.price);
+function generateProductOrder(basketList) {
+  let totalPrice = 0;
+  productList.innerHTML = '';
+  if (app.shoppingList !== null) {
+    app.shoppingList.forEach((product, index) => {
+      totalPrice += Number(product.count) * Number(product.product.price);
 
-  let shop=`
-   <div class="products-in-shopping-list">
+      let shop = `
+        <div class="products-in-shopping-list" data-id="${product.id}">
+          <div class="left-product">
+            <div class="btn-box">
+              <button type="button" class="mines-btn">-</button>
+              <span class="order-count">${product.count}</span>
+              <button type="button" class="pluse-btn">+</button>
+            </div>
+          </div>
+          <div class="right-product">
+            <div class="detail-product">
+              <div class="about-product">
+                <div class="name-product">
+                  <p>${product.product.title}</p>
+                </div>
+                <div class="price-product">
+                  <span>${product.product.price} dollars</span>
+                </div>
+              </div>
+              <div class="photo-of-product2">
+                <img class="photo-of-product" src="${product.product.image}" alt="coffee">
+              </div>
+            </div>
+          </div>
+        </div>`;
+      
+      productList.insertAdjacentHTML('beforeend', shop);
+    });
 
-  <div class="left-product">
-    <div class="btn-box">
-      <button type="button" class="mines-btn">-</button>
-      <span class="order-count">${product.count}</span>
-      <button type="button" class="pluse-btn">+</button>
-    </div>
+    totalProductPrice.innerHTML = totalPrice;
 
-  </div>
-  <div class="right-product">
-    <div class="detail-product">
-
-      <div class="about-product">
-        <div class="name-product">
-          <p>${product.product.title}</p>
-        </div>
-        <div class="price-product">
-        
-          <span>${product.product.price} dollars</span>
-        </div>
-      </div>
-      <div class="photo-of-product2">
-        <img class="photo-of-product"
-          src=${product.product.image}
-          alt="coffee">
-      </div>
-    </div>
-  </div>
-
-`
-// let lastChildShop=shoppingBox.lastElementChild
-// if (lastChildShop) {
-//   lastChildShop.insertAdjacentHTML('beforebegin', shop);
-// } else {
-//   shoppingBox.insertAdjacentHTML('afterbegin', shop);
-// }
-productList.insertAdjacentHTML('afterbegin',shop)
-totalProductPrice.innerHTML=totalPrice
-const productElement = productList.querySelectorAll('.products-in-shopping-list')[index];
-
-
+    document.querySelectorAll('.products-in-shopping-list').forEach((productElement, index) => {
       const plusBtn = productElement.querySelector('.pluse-btn');
       const orderCount = productElement.querySelector('.order-count');
       const minesBtn = productElement.querySelector('.mines-btn');
+      
       plusBtn.addEventListener('click', () => {
-       app.increaseProduct(product.id)
-      
-        orderCount.textContent = product.count;
-        totalPrice=0
-        totalPrice+=Number(orderCount.textContent)*Number(product.product.price)
-        totalProductPrice.innerHTML=totalPrice
+        app.increaseProduct(app.shoppingList[index].id);
+        orderCount.textContent = app.shoppingList[index].count;
+        updateTotalPrice();
       });
+
       minesBtn.addEventListener('click', () => {
-        if(product.count>0){
-         app.decreaseProduct(product.id)
-          orderCount.textContent = product.count;
-          totalPrice=0
-          totalPrice+=Number(orderCount.textContent)*Number(product.product.price)
-          totalProductPrice.innerHTML=totalPrice
+        app.decreaseProduct(app.shoppingList[index].id);
+        if (app.shoppingList[index].count === 0) {
+          app.shoppingList.splice(index, 1);
+          generateProductOrder(app.shoppingList);
+        } else {
+          orderCount.textContent = app.shoppingList[index].count;
+          updateTotalPrice();
         }
-      else if(product.count<=1){
-        const productIndex = findIndexInShoppingList(product.id);
-        // shoppingList.splice(productIndex, 1);
-        
-        generateProductOrder()
-        saveListToLocalStorage()
-      }
-      
-      })
-      
       });
-    }else{
-
-    }
-
-// }
+    });
+  } else {
+    productList.innerHTML = '<p>No products in the shopping list.</p>';
+  }
 }
 
+function updateTotalPrice() {
+  let totalPrice = 0;
+  app.shoppingList.forEach(product => {
+    totalPrice += Number(product.count) * Number(product.product.price);
+  });
+  totalProductPrice.innerHTML = totalPrice;
+}

@@ -462,6 +462,7 @@ Buttons on product card
 .about-product {
   font-size: 0.9rem;
   font-weight: bold;
+  text-wrap: nowrap;
 }
 
 .detail-product {
