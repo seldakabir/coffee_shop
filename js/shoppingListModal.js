@@ -61,9 +61,10 @@ btnOpenModal.addEventListener('click', function () {
 //show order products
 
 function generateProductOrder(basketList) {
+  console.log(app.shoppingList);
   let totalPrice = 0;
   productList.innerHTML = '';
-  if (app.shoppingList !== null) {
+  if (shoppingList.length!==0) {
     app.shoppingList.forEach((product, index) => {
       totalPrice += Number(product.count) * Number(product.product.price);
 
@@ -121,7 +122,7 @@ function generateProductOrder(basketList) {
       });
     });
   } else {
-    productList.innerHTML = '<p>No products in the shopping list.</p>';
+    productList.insertAdjacentHTML('afterbegin','<p>No products in the shopping list.</p>');
   }
 }
 
