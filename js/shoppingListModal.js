@@ -67,7 +67,7 @@ console.log(app.shoppingList);
   productList.innerHTML = '';
   if (shoppingList.shoppingList.length!==0) {
     app.shoppingList.forEach((product, index) => {
-      totalPrice += Number(product.count) * Number(product.product.price);
+      totalPrice  += Number(product.count) * Number(product.product.price);
 
       let shop = `
         <div class="products-in-shopping-list" data-id="${product.id}">
