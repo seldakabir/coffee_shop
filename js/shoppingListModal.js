@@ -61,10 +61,10 @@ btnOpenModal.addEventListener('click', function () {
 //show order products
 
 function generateProductOrder(basketList) {
-  console.log(app.shoppingList);
+console.log(app.shoppingList);
   let totalPrice = 0;
   productList.innerHTML = '';
-  if (shoppingList.length!==0) {
+  if (shoppingList.shoppingList.length!==0) {
     app.shoppingList.forEach((product, index) => {
       totalPrice += Number(product.count) * Number(product.product.price);
 
@@ -111,14 +111,20 @@ function generateProductOrder(basketList) {
       });
 
       minesBtn.addEventListener('click', () => {
-        app.decreaseProduct(app.shoppingList[index].id);
-        if (app.shoppingList[index].count === 0) {
+        
+        app.decreaseProduct(app.shoppingList[index]?.id);
+        if (app.shoppingList[index]?.count === 0) {
           app.shoppingList.splice(index, 1);
-          generateProductOrder(app.shoppingList);
         } else {
-          orderCount.textContent = app.shoppingList[index].count;
+          orderCount.textContent = app.shoppingList[index]?.count;
           updateTotalPrice();
         }
+        if(!app.shoppingList[index]){
+          generateProductOrder(app.shoppingList);
+          // console.log('product removed');
+
+        }
+
       });
     });
   } else {
